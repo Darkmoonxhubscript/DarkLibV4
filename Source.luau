@@ -650,7 +650,7 @@ Corner(TrecoImage, UDim.new(1, 1))
 local TrecoTextName = Create("TextLabel", Treco1,{
         Text = UserName_1,
         BackgroundTransparency = 1,
-        TextColor3 = Color3.fromRGB(200, 200, 200),
+        TextColor3 = GetTheme["Color Text"],
         Font = Enum.Font.GothamBold,
         TextSize = 14,
         TextDirection = "LeftToRight",
@@ -662,6 +662,38 @@ local TrecoTextName = Create("TextLabel", Treco1,{
         Position = UDim2.new(0, 50, 0, 15)
     })
   
+  local TrecoHoras = Create("TextLabel", Treco1,{
+        Text = "Loading...",
+        BackgroundTransparency = 1,
+        TextColor3 = GetTheme["Color Dark Text"],
+        Font = Enum.Font.GothamBold,
+        TextSize = 15,
+        TextDirection = "LeftToRight",
+        TextScaled = false,
+        TextWrapped = false,
+        TextXAlignment = Enum.TextXAlignment.Right,
+        TextYAlignment = Enum.TextYAlignment.Center,
+        Size = UDim2.new(0, 120, 0, 20),
+        Position = UDim2.new(0, 50, 0, 33)
+    })
+  
+  local function formatTime(hour, minute)
+    local suffix = hour >= 12 and "PM" or "AM"
+    hour = hour % 12
+    if hour == 0 then hour = 12 end
+    return string.format("%d:%02d %s", hour, minute, suffix)
+end
+
+  task.spawn(function()
+    while task.wait(0.1) do
+        local currentTime = os.date("*t")
+        local formattedTime = formatTime(currentTime.hour, currentTime.min)
+        SetProps(TrecoHoras, {
+          Text = formattedTime
+        }) 
+    end
+    end)
+
   local Hide = false
   
 local Treco2 = Create("TextButton", Treco1, {
@@ -1951,5 +1983,30 @@ function AddDiscordInvite(Parent, Configs)
 end
 
 end -- Window Close
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 return darklib
