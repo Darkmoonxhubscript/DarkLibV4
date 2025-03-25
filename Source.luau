@@ -83,11 +83,30 @@ local darklib = {
       ["Color Dark Text"] = Color3.fromRGB(150, 150, 150),
       ["Color Effect"] = Color3.fromRGB(85, 215, 0),
       ["Color Toggle Off"] = Color3.fromRGB(50, 180, 0)
+    },
+  Purpler = {
+      ["Color Hub 1"] = ColorSequence.new({
+        ColorSequenceKeypoint.new(0.00, Color3.fromRGB(20, 20, 20)),
+        ColorSequenceKeypoint.new(0.50, Color3.fromRGB(27.5, 27.5, 27.5)),
+        ColorSequenceKeypoint.new(1.00, Color3.fromRGB(20, 20, 20))
+      }),
+      ["Color Hub 2"] = Color3.fromRGB(15, 15, 15),
+      ["Color Hub 3"] = Color3.fromRGB(180, 0, 255),
+      ["Color Hub 4"] = Color3.fromRGB(35, 35, 35),
+      ["Color Hub 5"] = Color3.fromRGB(60, 60, 60),
+      ["Color Hub 6"] = Color3.fromRGB(50, 50, 50),
+      ["Color Hub 7"] = Color3.fromRGB(100, 100, 100),
+      ["Color Stroke"] = Color3.fromRGB(30, 30, 30),
+      ["Color Theme"] = Color3.fromRGB(128, 0, 255),
+      ["Color Text"] = Color3.fromRGB(255, 200, 255),
+      ["Color Dark Text"] = Color3.fromRGB(200, 150, 200),
+      ["Color Effect"] = Color3.fromRGB(200, 0, 255),
+      ["Color Toggle Off"] = Color3.fromRGB(111, 0, 187)
     }
   },
   Info = {
     Version = "1.0.2",
-    Theme = "Darker",
+    Theme = "Purpler",
     PlaceName = MarketplaceService:GetProductInfo(game.PlaceId).Name
   },
   Icons = loadstring(game:HttpGet("https://raw.githubusercontent.com/Darkmoonxhubscript/DarkLibV4/refs/heads/main/Icons.luau"))(),
