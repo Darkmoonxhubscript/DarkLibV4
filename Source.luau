@@ -222,7 +222,7 @@ local KeyLink = WindowConfig.KeySystem.KeyLink or "No Link Provided"
   GetTheme = darklib.Themes[darklib.Info.Theme]
   
 local ScreenGui = Create("ScreenGui", CoreGui, {
-    Name = "DarkLib V4",
+    Name = "DarkLibV4",
     ResetOnSpawn = false
 })
   Create("UIScale", ScreenGui, {
@@ -1764,21 +1764,14 @@ MakeDrag(MinimizeButton)
   local MinimizeButtonState = true
   MinimizeButton.MouseButton1Click:Connect(function()
     if MinimizeButtonState then
-      local tweenClose = TweenService:Create(MainFrame, TweenInfo.new(0.15, Enum.EasingStyle.Linear), {Size = UDim2.new(0, 0, 0, 0)})
-  tweenClose:Play()
-  tweenClose.Completed:Wait()
-      SetProps(MainFrame, {
-        Visible = false
-      })
+      getgenv().PosFrame = game.CoreGui.DarkLibV4.MainFrame.Position
+      local tween2 = TweenService:Create(MainFrame, TweenInfo.new(0.2), {Position = UDim2.new(100, 100, 100, 100)})
+      tween2:Play()
       MinimizeButtonState = false
       else
-        SetProps(MainFrame, {
-        Visible = true
-      })
+        local tween1 = TweenService:Create(MainFrame, TweenInfo.new(0.2), {Position = getgenv().PosFrame})
+      tween1:Play()
         MinimizeButtonState = true
-        local tweenOpen = TweenService:Create(MainFrame, TweenInfo.new(0.15, Enum.EasingStyle.Linear), {Size = UDim2.new(0.5, 0, 0.6, 0)})
-  tweenOpen:Play()
-  tweenOpen.Completed:Wait()
 end
 end)
   return MinimizeButton
