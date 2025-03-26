@@ -497,7 +497,7 @@ Stroke(MainFrame, GetTheme["Color Hub 2"], 3, 0)
 MakeDrag(MainFrame)
 
 local UiSize = Create("UIAspectRatioConstraint", MainFrame, {
-    AspectRatio = 1200 / 600,  
+    AspectRatio = workspace.CurrentCamera.ViewportSize.X / workspace.CurrentCamera.ViewportSize.Y,
     DominantAxis = Enum.DominantAxis.Width,  
     Parent = MainFrame
 })
