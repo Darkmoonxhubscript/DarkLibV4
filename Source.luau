@@ -98,8 +98,8 @@ local darklib = {
       ["Color Hub 7"] = Color3.fromRGB(100, 100, 100),
       ["Color Stroke"] = Color3.fromRGB(30, 30, 30),
       ["Color Theme"] = Color3.fromRGB(128, 0, 255),
-      ["Color Text"] = Color3.fromRGB(255, 200, 255),
-      ["Color Dark Text"] = Color3.fromRGB(200, 150, 200),
+      ["Color Text"] = Color3.fromRGB(220, 220, 220),
+      ["Color Dark Text"] = Color3.fromRGB(150, 150, 150),
       ["Color Effect"] = Color3.fromRGB(200, 0, 255),
       ["Color Toggle Off"] = Color3.fromRGB(111, 0, 187)
     }
@@ -944,8 +944,8 @@ function AddButton(Parent, Configs)
   tween1:Play()
   tween2:Play()
   tween1.Completed:Wait()
-  local tween3 = TweenService:Create(TextLabel, TweenInfo.new(0.3, Enum.EasingStyle.Linear), {TextColor3 = Color3.fromRGB(240, 240, 240)})
-  local tween4 = TweenService:Create(Image, TweenInfo.new(0.3, Enum.EasingStyle.Linear), {ImageColor3 = Color3.fromRGB(255, 255, 255)})
+  local tween3 = TweenService:Create(TextLabel, TweenInfo.new(0.3, Enum.EasingStyle.Linear), {TextColor3 = GetTheme["Color Text"]})
+  local tween4 = TweenService:Create(Image, TweenInfo.new(0.3, Enum.EasingStyle.Linear), {ImageColor3 = GetTheme["Color Text"]})
   tween3:Play()
   tween4:Play()
     end)
