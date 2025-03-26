@@ -248,10 +248,6 @@ local ScreenGui = Create("ScreenGui", CoreGui, {
     ResetOnSpawn = false
 })
 
-Create("UIScale", ScreenGui, {
-    Scale = 0.9384163618087769
-})
-
 local NotifyMenu = Create("Frame", ScreenGui, {
     Size = UDim2.new(0, 300, 1, 0),
     Position = UDim2.new(1, 0, 0, 25),
