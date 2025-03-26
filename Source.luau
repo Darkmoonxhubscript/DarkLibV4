@@ -125,6 +125,9 @@ function GetPlaceName()
   return darklib.Info.PlaceName
   end
 
+local ViewportSize = workspace.CurrentCamera.ViewportSize
+local UIScale = ViewportSize.Y / 660
+
 local function SetProps(Instance, Props)
     if Props then
         for prop, value in pairs(Props) do
@@ -245,7 +248,7 @@ local ScreenGui = Create("ScreenGui", CoreGui, {
     ResetOnSpawn = false
 })
   Create("UIScale", ScreenGui, {
-    Scale = 0.9384163618087769
+    Scale = UIScale
 })
 
 local NotifyMenu = Create("Frame", ScreenGui, {
