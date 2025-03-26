@@ -247,8 +247,9 @@ local ScreenGui = Create("ScreenGui", CoreGui, {
     Name = "DarkLibV4",
     ResetOnSpawn = false
 })
-  Create("UIScale", ScreenGui, {
-    Scale = UIScale
+
+Create("UIScale", ScreenGui, {
+    Scale = 0.9384163618087769
 })
 
 local NotifyMenu = Create("Frame", ScreenGui, {
@@ -479,12 +480,12 @@ Stroke(SendKey, GetTheme["Color Hub 5"], 2)
   end
 
 
-local AcrylicTrans = Acrylic and 0.1 or 0 -- Acrylic is Trans?
+local AcrylicTrans = Acrylic and 0.1 or 0 -- Idk?
 
 local MainFrame = Create("Frame", ScreenGui, {
     Name = "MainFrame",
     BackgroundColor3 = GetTheme["Color Hub 2"],
-    Size = UDim2.new(0.5, 0, 0.6, 0),
+    Size = UDim2.new(0.5, 0, 0.6, 0), 
     Position = UDim2.new(0.5, 0, 0.5, 0),
     AnchorPoint = Vector2.new(0.5, 0.5),
     BackgroundTransparency = AcrylicTrans,
@@ -494,6 +495,12 @@ local MainFrame = Create("Frame", ScreenGui, {
 Corner(MainFrame, UDim.new(0, 10))
 Stroke(MainFrame, GetTheme["Color Hub 2"], 3, 0)
 MakeDrag(MainFrame)
+
+local UiSize = Create("UIAspectRatioConstraint", MainFrame, {
+    AspectRatio = 1480 / 720,  
+    DominantAxis = Enum.DominantAxis.Width,  
+    Parent = MainFrame
+})
 
 local TopBar = Create("Frame", MainFrame, {
     Name = "TopBar",
