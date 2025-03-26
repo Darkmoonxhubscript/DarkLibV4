@@ -248,6 +248,10 @@ local ScreenGui = Create("ScreenGui", CoreGui, {
     ResetOnSpawn = false
 })
 
+Create("UIScale", ScreenGui, {
+    Scale = 0.9384163618087769
+})
+
 local NotifyMenu = Create("Frame", ScreenGui, {
     Size = UDim2.new(0, 300, 1, 0),
     Position = UDim2.new(1, 0, 0, 25),
@@ -493,7 +497,7 @@ Stroke(MainFrame, GetTheme["Color Hub 2"], 3, 0)
 MakeDrag(MainFrame)
 
 local UiSize = Create("UIAspectRatioConstraint", MainFrame, {
-    AspectRatio = 1480 / 720,  
+    AspectRatio = 1200 / 600,  
     DominantAxis = Enum.DominantAxis.Width,  
     Parent = MainFrame
 })
