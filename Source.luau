@@ -603,7 +603,7 @@ end)
 local LeftBar = Create("Frame", MainFrame, {
     Name = "TabsBar",
     BackgroundColor3 = Color3.fromRGB(30, 30, 30),
-    Size = UDim2.new(0, 176, 0, 247),
+    Size = UDim2.new(0, 176, 0, 270),
     BackgroundTransparency = 1,
     Position = UDim2.new(0, 2, 0.1, 0)
 })
@@ -652,7 +652,7 @@ local Treco1 = Create("Frame", MainFrame, {
     BackgroundColor3 = GetTheme["Color Hub 4"],
     Size = UDim2.new(0, 177, 0, 50),
     BackgroundTransparency = AcrylicTrans2 or 0,
-    Position = UDim2.new(0, 2, 0, 280)
+    Position = UDim2.new(0, 2, 0, 307)
 })
 Corner(Treco1, UDim.new(0, 10))  
 Stroke(Treco1, GetTheme["Color Hub 2"], 1.5, 0)
