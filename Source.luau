@@ -499,7 +499,7 @@ MakeDrag(MainFrame)
 local UiSize = Create("UIAspectRatioConstraint", MainFrame, {
     AspectRatio = workspace.CurrentCamera.ViewportSize.X / workspace.CurrentCamera.ViewportSize.Y,
     DominantAxis = Enum.DominantAxis.Width,  
-    Parent = MainFrame
+    Parent = ScreenGui
 })
 
 local TopBar = Create("Frame", MainFrame, {
